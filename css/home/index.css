@@ -1,0 +1,508 @@
+@charset "UTF-8";
+@font-face {
+  font-family: gotham;
+  src: url("/font/gotham-light.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: gotham;
+  font-weight: 100;
+  color: #0d182a;
+}
+
+.flex, #my-menu nav, #home-section, #about-section, #portfolio-section, #portfolio-section #portifolio-job, #portfolio-section #portifolio-job .designer, #budget-section, #contat-section, #contat-section form, #contat-section #button-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.background, #home-section::after, #budget-section ::after {
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/*Organizar o header*/
+#my-menu nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #0d182a;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+#my-menu nav #logo-left {
+  left: 2%;
+  position: fixed;
+}
+
+#my-menu nav #logo-left img {
+  /*Imagem logo*/
+  width: 110px;
+}
+
+#my-menu nav #controle-menu {
+  display: none;
+}
+
+#my-menu nav #menu-right {
+  right: 4%;
+  position: absolute;
+}
+
+#my-menu nav #menu-right li {
+  display: inline;
+  color: #ffffff;
+}
+
+#my-menu nav #menu-right a {
+  text-decoration: none;
+  padding: 28px 10px;
+}
+
+#my-menu nav #menu-right a:hover {
+  background-color: #000;
+}
+
+/*Primeira section - home*/
+/*-----------------------------------------------------------------------------------------------*/
+main {
+  overflow: hidden;
+}
+
+#home-section {
+  width: 98.792vw;
+  height: 100vh;
+  position: relative;
+}
+
+#home-section::after {
+  content: "";
+  background-image: url("/img/aperto-de-mãos-transpa.jpg");
+  background-size: 98.792vw;
+  height: 150vh;
+  width: 98.792vw;
+  opacity: 0.3;
+}
+
+#home-section h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px 20px;
+  background-color: #09c185;
+  padding: 10px;
+  color: #ffffff;
+  text-shadow: #ffffff 1px -1px, #ffffff -1px 1px, #ffffff 1px 1px, #ffffff -1px -1px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-size: 2.7em;
+}
+
+#home-section p {
+  color: #09c185;
+  text-shadow: #09c185 1px -1px, #09c185 -1px 1px, #09c185 1px 1px, #09c185 -1px -1px;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+}
+
+#home-section .border {
+  color: #ffffff;
+  font-size: 900;
+  text-shadow: #09c185 1px -1px, #09c185 -1px 1px, #09c185 1px 1px, #09c185 -1px -1px;
+}
+
+#home-section #vee {
+  position: absolute;
+  font-weight: 900;
+  bottom: 2vh;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
+}
+
+@-webkit-keyframes move {
+  0% {
+    bottom: 2vh;
+  }
+  50% {
+    bottom: 4vh;
+  }
+  100% {
+    bottom: 2vh;
+  }
+}
+
+@keyframes move {
+  0% {
+    bottom: 2vh;
+  }
+  50% {
+    bottom: 4vh;
+  }
+  100% {
+    bottom: 2vh;
+  }
+}
+
+/*Segunda section - about*/
+/*-----------------------------------------------------------------------------------------------*/
+#about-section {
+  height: calc(100vh + 20px);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 2.5em;
+  padding-left: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+#about-section h1 {
+  color: #0d182a;
+  font-size: 2em;
+  margin-bottom: 0.6em;
+  font-weight: 50;
+}
+
+#about-section h1 #deed {
+  color: #ffffff;
+  background-color: #0d182a;
+  font-weight: bold;
+  padding: 10px 2px;
+}
+
+#about-section p {
+  font-weight: 50;
+}
+
+#about-section p span {
+  font-weight: bold;
+}
+
+#about-section a {
+  color: #09c185;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+#about-section a span {
+  color: #09c185;
+}
+
+#about-section picture {
+  position: absolute;
+  right: -15vw;
+  bottom: -34vh;
+  -webkit-animation: engear-right 8s infinite;
+          animation: engear-right 8s infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes engear-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes engear-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*terceira section - portfólio*/
+/*-----------------------------------------------------------------------------------------------*/
+#portfolio-section {
+  border-bottom: 1px solid black;
+  height: 100vh;
+  width: 98.792vw;
+  position: relative;
+}
+
+#portfolio-section #portiolio-text {
+  /*Texto superior*/
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10vh;
+  font-size: 2em;
+}
+
+#portfolio-section #portiolio-text #title-p {
+  margin-left: 2%;
+  width: 50vw;
+  height: 100px;
+  font-size: 1.2em;
+  position: relative;
+}
+
+#portfolio-section #portiolio-text #title-p h1 {
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #0d182a;
+  padding: 10px;
+  position: absolute;
+}
+
+#portfolio-section #portiolio-text #text-p {
+  width: 50vw;
+  border-bottom: 8px solid #09c185;
+}
+
+#portfolio-section #portifolio-job {
+  /*Exibição dos portifolios*/
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#portfolio-section #portifolio-job .designer {
+  position: relative;
+  text-transform: uppercase;
+  background-color: #0d182a;
+  margin-left: 2vw;
+  width: 250px;
+  height: 250px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#portfolio-section #portifolio-job .designer h1 {
+  color: #ffffff;
+}
+
+#portfolio-section #portifolio-job .designer h1 span {
+  font-weight: 900;
+  color: #ffffff;
+}
+
+#portfolio-section #portifolio-job .designer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 10px;
+  width: 180px;
+  border-radius: 15px;
+  background-color: #09c185;
+  position: absolute;
+  bottom: -20px;
+}
+
+#portfolio-section #portifolio-job .designer a:hover {
+  /*Animação dos botoes do formulario*/
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #09c185;
+}
+
+#portfolio-section picture {
+  position: absolute;
+  opacity: .3;
+  bottom: -220px;
+  left: -220px;
+  -webkit-animation: engear-left 8s infinite;
+          animation: engear-left 8s infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes engear-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes engear-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+/*quarta section - contratação*/
+/*-----------------------------------------------------------------------------------------------*/
+#budget-section {
+  position: relative;
+  width: 98.792vw;
+  height: 100vh;
+  border-bottom: 1px solid black;
+}
+
+#budget-section ::after {
+  content: "";
+  background-image: url("/img/5-04.jpg");
+  background-attachment: fixed;
+  background-size: 98.792vw 100vh;
+  height: 100vh;
+  width: 98.792vw;
+}
+
+#budget-section h1 {
+  background-color: #0d182a;
+  color: #ffffff;
+  font-size: 5em;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+#budget-section h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: orange;
+}
+
+#budget-section a {
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid orange;
+  color: orange;
+  border-radius: 20px;
+}
+
+#budget-section a:hover {
+  border: 2px solid #09c185;
+  color: #09c185;
+}
+
+/*quinta section - contatos*/
+/*-----------------------------------------------------------------------------------------------*/
+#contat-section {
+  width: 98.792vw;
+  height: 100vh;
+  background-color: #0d182a;
+}
+
+#contat-section picture {
+  margin-top: -50px;
+  color: #ffffff;
+}
+
+#contat-section picture img {
+  width: 220px;
+}
+
+#contat-section h1 {
+  color: #ffffff;
+  text-shadow: #ffffff 1px -1px, #ffffff -1px 1px, #ffffff 1px 1px, #ffffff -1px -1px;
+  font-weight: 900;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: -40px 0 10px 0;
+}
+
+#contat-section form {
+  width: 40%;
+  min-width: 550px;
+  position: relative;
+}
+
+#contat-section form label {
+  margin-top: 10px;
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+}
+
+#contat-section form .input-form {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#contat-section form .input-form:nth-child(1) {
+  margin-top: 0;
+}
+
+#contat-section form #box-text {
+  width: 100%;
+  margin-top: 10px;
+  resize: none;
+  padding: 10px;
+}
+
+#contat-section #button-footer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 20%;
+  padding-top: 2%;
+  margin: 0 0 2% 0;
+}
+
+#contat-section #button-footer li {
+  list-style: none;
+}
+
+#contat-section #button-footer li img {
+  width: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#contat-section #button-footer li img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=index.css.map */

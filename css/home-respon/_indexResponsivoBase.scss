@@ -1,0 +1,39 @@
+$colorPrimary: #0d182a;
+$colorSecond: #09c185;
+$colorText:#ffffff;
+$colorOrcamento: orange;
+$colorThird: #07faa2;
+@font-face{
+    font-family: gotham;
+    src: url('/font/gotham-light.ttf')
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: gotham;
+    font-weight: 100;
+    color: $colorPrimary;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.background{
+    background-repeat:no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.sizeText{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 10px;
+}

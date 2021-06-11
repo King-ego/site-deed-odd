@@ -1,0 +1,80 @@
+#spacePortifolio {
+    height: calc(100vh - 80px);
+    width: 98.792vw;
+    @extend .flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .budget {
+        position: relative;
+        @extend .flex;
+        flex-direction: row;
+        background-color: $colorPrimary;
+        width: 24vw;
+        min-width: 250px;
+        height: 15vh;
+        transition: 200ms ease-in;
+        &:hover {
+            transform: translateY(10px);
+            opacity: 0.95;
+        }
+        .titleOrcmento {
+            @extend .flex;
+            flex-direction: row;
+            cursor: pointer;
+        }
+        h1 {
+            color: $text-color;
+        }
+        span {
+            @extend .flex;
+            border: 1px solid $colorThird;
+            border-radius: 5px;
+            color: $colorThird;
+            padding: 0;
+            width: 35px;
+            height: 35px;
+            font-size: 30pt;
+            font-weight: 900;
+            margin-left: 10px;
+        }
+        .option {
+            width: 12vw;
+            min-width: 200px;
+            height: 20vh;
+            background-color: $colorSecond;
+            @extend .flex;
+            position: absolute;
+            top: 10vh;
+            padding: 10px;
+            
+            display: none;
+            ul {
+                margin: auto;
+            }
+            a {
+                text-decoration: none;
+                li {
+                    list-style: none;
+                    font-weight: 900;
+                    margin-top: 4px;
+                    &:hover {
+                        background-color: $colorPrimary;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+        .optionVideo {
+            right: 7.8vw;
+            justify-content: space-around;
+        }
+        .optionDesigner {
+            right: 6.5vw;
+            justify-content: space-around;
+        }
+        .optionWebDesigner {
+            right: 4.3vw;
+            justify-content: space-around;
+        }
+    }
+}

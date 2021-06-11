@@ -1,0 +1,51 @@
+/*Segunda section - about*/
+/*-----------------------------------------------------------------------------------------------*/
+#about-section{
+    height: calc(100vh + 20px);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    @extend .flex;
+    align-items:flex-start;
+    font-size: 2.5em;
+    padding-left: 2%;
+    position: relative;
+    overflow: hidden;
+    h1{
+        color: $colorPrimary;
+        font-size: 2em;
+        margin-bottom: 0.6em;
+        font-weight: 50;
+        #deed{
+            color: $text-color;
+            background-color: $colorPrimary;
+            font-weight: bold;
+            padding: 10px 2px;
+        }
+    }
+    p{
+        font-weight: 50;
+        span{
+            font-weight: bold;
+        }
+    }
+    a{
+        color: $colorSecond;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 0.8em;
+        span{
+            color: $colorSecond; 
+        }
+    }
+    picture{
+        position: absolute;
+        right: -15vw;
+        bottom: -34vh;
+        animation: engear-right 8s infinite;
+        z-index: -1;
+        @keyframes engear-right{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+    }
+}

@@ -1,0 +1,73 @@
+#spacePortifolio {
+    height: calc(100vh - 80px);
+    width: 100%;
+    @extend .flex;
+    justify-content: space-around;
+    .budget {
+        position: relative;
+        @extend .flex;
+        flex-direction: row;
+        background-color: $colorPrimary;
+        width: 250px;
+        height: 90px;
+        .option {
+            width: 200px;
+            height: 400px;
+            background-color: $colorThird;
+            position: absolute;
+            padding: 0 10px 10px 10px;
+            transform: all;
+            display: none;
+            justify-content: space-around;
+            z-index: 999;
+            a {
+                text-decoration: none;
+                font-weight: 900;
+                width: 10vw;
+                li {
+                    font-size: 20pt;
+                    margin-top: 10px;
+                    list-style: none;
+                    &:hover {
+                        background-color: $colorPrimary;
+                        color: $colorText;
+                    }
+                }
+            }
+        }
+        .modal {
+            width: 100vw;
+            height: 100vh;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @extend .flex;
+            .budget_hide {
+                display: none;
+            }
+        }
+        .titleOrcmento {
+            @extend .flex;
+            flex-direction: row;
+            cursor: pointer;
+        }
+        h1 {
+            color: $colorText;
+        }
+        span {
+            @extend .flex;
+            border: 1px solid $colorThird;
+            border-radius: 5px;
+            color: $colorThird;
+            padding: 0;
+            width: 35px;
+            height: 35px;
+            font-size: 30pt;
+            font-weight: 900;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+#spacePortifolio {
+    height: calc(100vh - 80px);
+    width: 100%;
+    @extend .flex;
+    justify-content: space-around;
+    .budget {
+        position: relative;
+        @extend .flex;
+        flex-direction: row;
+        background-color: $colorPrimary;
+        width: 250px;
+        height: 90px;
+        .option {
+            width: 300px;
+            height: 120px;
+            background-color: $colorThird;
+            position: absolute;
+            padding: 0 10px 10px 10px;
+            transform: all;
+            display: none;
+            z-index: 999;
+            right: -25px;
+            top: 60px;
+            .left{
+                left: 0;
+                margin-top: 11%;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+            }
+            .rightOne{
+                right: 0;
+                margin-top: 0;
+            }
+            .rightTwo{
+                right: 0;
+                margin-top: 11%;
+            }
+            .clean{
+                margin-top: 22%;
+                left: 0;
+            }
+            a {
+                position: absolute;
+                text-decoration: none;
+                font-weight: 900;
+                width: 50%;
+                li {
+                    padding: 5px 0 5px 5px;
+                    font-size: 15pt;
+                    margin-top: 10px;
+                    list-style: none;
+                    &:hover {
+                        background-color: $colorPrimary;
+                        color: $colorText;
+                    }
+                }
+            }
+        }
+        .optionWebDesigner{
+            top: -90px;
+        }
+        .titleOrcmento {
+            @extend .flex;
+            flex-direction: row;
+            cursor: pointer;
+        }
+        h1 {
+            color: $colorText;
+        }
+        span {
+            @extend .flex;
+            border: 1px solid $colorThird;
+            border-radius: 5px;
+            color: $colorThird;
+            padding: 0;
+            width: 35px;
+            height: 35px;
+            font-size: 30pt;
+            font-weight: 900;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/*Organizar o header*/
+#my-menu{
+    nav{
+        @extend .flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: $colorPrimary;
+        height: 80px;
+        position: relative;
+        z-index: 1;
+        width: 100%; /**/ 
+        #logo-left{
+            position: fixed;
+            left:2%;
+            img{/*Imagem logo*//**/
+                width: 110px;
+            }
+        }
+        #controle-menu{/**/
+            position: fixed;
+            right: 2%;
+            @extend .flex;
+            cursor: pointer;
+            span{
+                margin-top: 10px;
+                height: 2px;
+                width: 40px;
+                background-color: blanchedalmond;
+                transition: 400ms ease-in-out;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+            }
+        }
+        #menu-right{/**/
+            width: 50vw;
+            height: 250px;
+            position: absolute;
+            background-color: $colorPrimary;
+            right: 0;
+            top:80px;
+            display:none;
+            a{/**/
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                text-decoration: none;
+                color: $colorText;
+                li{/**/
+                    @extend .flex;
+                    margin-top: 10px;
+                    height: 50px;
+                    color: $colorText;
+                    &:nth-child(1){/**/
+                        margin-top: 0;
+                    }
+                    &:hover{
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+} 

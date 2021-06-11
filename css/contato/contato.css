@@ -1,0 +1,129 @@
+@font-face {
+  font-family: gotham;
+  src: url("/font/gotham-light.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: gotham;
+  font-weight: 100;
+  color: #0d182a;
+}
+
+.flex, #my-menu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/*Organizar o header*/
+#my-menu nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #0d182a;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+#my-menu nav #logo-left {
+  left: 2%;
+  position: fixed;
+}
+
+#my-menu nav #logo-left img {
+  /*Imagem logo*/
+  width: 110px;
+}
+
+#my-menu nav #controle-menu {
+  display: none;
+}
+
+#my-menu nav #menu-right {
+  right: 4%;
+  position: absolute;
+}
+
+#my-menu nav #menu-right li {
+  display: inline;
+  color: #ffffff;
+}
+
+#my-menu nav #menu-right a {
+  text-decoration: none;
+  padding: 28px 10px;
+}
+
+#my-menu nav #menu-right a:hover {
+  background-color: #000;
+}
+
+main {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+/*# sourceMappingURL=contato.css.map */

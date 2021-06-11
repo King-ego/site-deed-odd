@@ -1,0 +1,91 @@
+/*terceira section - portfólio*/
+/*-----------------------------------------------------------------------------------------------*/
+#portfolio-section{
+    border-bottom: 1px solid black;
+    height: 100vh;
+    width:  100%;
+    @extend .flex;
+    overflow: hidden;
+    position: relative;
+    #portiolio-text{/*Texto superior*/
+        width: 100%;
+        @extend .flex;
+        justify-content: baseline;
+        margin: 5vh 0 4vh 0;
+        font-size: 1em;
+        #title-p{
+            margin-left: 5%;
+            width: 50vw;
+            height: 80px;
+            font-size: 1.2em;
+            position: relative;    
+            h1{
+                font-weight: 900;
+                color: $colorText;
+                background-color: $colorPrimary;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+        #text-p{
+            text-align: center;
+            width:  100%;
+            border-bottom: 8px solid $colorSecond;
+        }
+    }
+    #portifolio-job{/*Exibição dos portifolios*/
+        @extend .flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .designer{
+            @extend .flex;
+            position: relative;
+            text-transform: uppercase;
+            background-color: $colorPrimary;
+            margin-left: 2vw;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 0.6em;
+            h1{
+                color:$colorText;
+                span{
+                    font-weight: 900;
+                    color:$colorText;
+                }
+            }
+            a{
+                color: $colorText;
+                text-decoration: none;
+                font-size: 0.8em;
+                padding: 10px;
+                width: 90px;
+                border-radius: 15px;
+                background-color: $colorSecond;
+                position: absolute;
+                bottom: -20px;
+                &:hover{/*Animação dos botoes do formulario*/
+                    transform: scale(1.1);
+                    background-color: $colorSecond;
+                }
+            }
+        }
+    }
+    picture{
+        position: absolute;
+        opacity: .3;
+        bottom: -220px;
+        left: -220px;
+        animation: engear-left 8s infinite;
+        z-index: -1;
+        @keyframes engear-left{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(-360deg);}
+        }
+        #gear-left{
+            width: 400px;
+        }
+    }
+}

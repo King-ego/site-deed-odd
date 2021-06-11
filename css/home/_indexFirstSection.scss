@@ -1,0 +1,55 @@
+/*Primeira section - home*/
+/*-----------------------------------------------------------------------------------------------*/
+main{
+    overflow: hidden
+}
+#home-section{
+    @extend .flex;
+    width: 98.792vw;
+    height: 100vh;
+    position: relative;
+    &::after{
+        content: "";
+        background-image: url('/img/aperto-de-mãos-transpa.jpg');
+        @extend .background;
+        background-size: 98.792vw;
+        height: 150vh;
+        width: 98.792vw;
+        opacity: 0.3;
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        padding: 30px 20px;
+        background-color: $colorSecond;
+        padding: 10px;
+        color: $text-color;
+        text-shadow:$text-color 1px -1px, $text-color -1px 1px, $text-color 1px 1px, $text-color -1px -1px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        font-size: 2.7em;
+    }
+    p{
+        color:$colorSecond;
+        text-shadow:$colorSecond 1px -1px, $colorSecond -1px 1px, $colorSecond 1px 1px, $colorSecond -1px -1px;
+        font-weight: 900;
+        font-size: 2em;
+        text-align: center;
+    }
+    .border{
+        color:$text-color; 
+        font-size: 900;
+        text-shadow:$colorSecond 1px -1px, $colorSecond -1px 1px, $colorSecond 1px 1px, $colorSecond -1px -1px;
+    }
+    #vee{
+        position: absolute;
+        font-weight: 900;
+        bottom: 2vh;
+        animation: move 2s infinite;
+        @keyframes move{
+            0% { bottom: 2vh;}
+            50% {bottom: 4vh;}
+            100% {bottom: 2vh;}
+        }
+    }
+}

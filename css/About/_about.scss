@@ -1,0 +1,44 @@
+header nav{
+    width: 100vw;
+}
+#main-about{
+    height: calc(100vh - 80px);
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    width: 100vw;
+    overflow: hidden;
+}
+#main-about h1{
+    font-size: 2.6em;
+    margin-bottom: 20px;
+}
+#main-about h1 span{
+    font-weight: 900;
+    background-color: $colorPrimary;
+    color: #ffffff;
+}
+#main-about p strong{
+    font-weight: 900;
+}
+#footer-about{
+    border-top: 3px solid black;
+    margin-top: 20px ; 
+    padding-top: 20px;
+    position: relative;
+}
+#footer-about ul{
+    list-style: none;
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-around;
+    right: 4%;
+    width: 36vw;
+}
+#footer-about img{
+    background-color: $colorPrimary;
+}
